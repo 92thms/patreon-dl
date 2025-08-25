@@ -7,11 +7,12 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "npm run build:core && npm run build:web",
-    "build:core": "rm -rf dist && npx tsc -p tsconfig.json",
+    "build:core": "rm -rf dist && npx tsc -p tsconfig.json && cp -r src/webui/public dist/webui",
     "lint": "npx eslint ./src",
     "lint:fix": "npx eslint ./src --fix",
     "build:web": "vite build",
-    "doc": "npx typedoc"
+    "doc": "npx typedoc",
+    "start:webui": "node dist/webui/server.js"
   },
   "bin": {
     "patreon-dl": "./bin/patreon-dl.js",
