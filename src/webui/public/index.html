@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>patreon-dl Web UI</title>
+</head>
+<body>
+  <form id="configForm">
+    <div>
+      <label>Target URL: <input id="targetUrl" required></label>
+    </div>
+    <div>
+      <label>Cookie: <input id="cookie" required></label>
+    </div>
+    <div>
+      <label>Output Directory: <input id="outDir" value="./downloads"></label>
+    </div>
+    <button type="submit">Start Download</button>
+  </form>
+  <pre id="logs" style="height:300px; overflow:auto; border:1px solid #ccc;"></pre>
+  <script src="main.js"></script>
+</body>
+</html>

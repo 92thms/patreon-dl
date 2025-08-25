@@ -68,6 +68,17 @@ See the [example config](./example-embed.conf) on how to configure an external d
 
    The `-g` option is for installing `patreon-dl` globally and have the CLI executable added to the PATH. Depending on your usage, you might not need this.
 
+## Docker & Web UI
+
+The repository includes a minimal web interface for starting downloads and viewing log output. To build and run it in Docker:
+
+```
+docker build -t patreon-dl .
+docker run -p 8800:8800 patreon-dl
+```
+
+Open `http://localhost:8800` in your browser to configure the download and see logs. Use environment variable `PORT` to change the port if another `880X` port is required.
+
 ## CLI usage
 
 ```

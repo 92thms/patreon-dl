@@ -134,7 +134,8 @@ export default tslint.config(
             "docs",
             "**/node_modules",
             "bin",
-            "test"
+            "test",
+            "src/webui/public"
         ],
     },
 );
